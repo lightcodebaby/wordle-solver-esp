@@ -21,7 +21,7 @@ public class AutoSolverComponent {
         this.twitterService = twitterService;
     }
 
-    @Scheduled(cron = "0 17 18 * * *", zone = "Europe/Madrid")
+    @Scheduled(cron = "0 15 0 * * *", zone = "Europe/Madrid")
     public void solveWordle() throws MalformedURLException {
         String solution = seleniumService.autoSolveWordle();
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern(Values.DATE_FORMATTER_PATTERN));
